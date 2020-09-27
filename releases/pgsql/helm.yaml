@@ -4,8 +4,8 @@ metadata:
   name: pgsql
   namespace: databases
 spec:
+  releaseName: pgsql
   chart:
-    releaseName: pgsql
     repository: https://charts.bitnami.com/bitnami
     name: postgresql
     version: 9.7.2

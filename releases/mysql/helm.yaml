@@ -4,8 +4,8 @@ metadata:
   name: mysql
   namespace: databases
 spec:
+  releaseName: mysql
   chart:
-    releaseName: mysql
     repository: https://charts.bitnami.com/bitnami
     name: mysql
     version: 6.14.10

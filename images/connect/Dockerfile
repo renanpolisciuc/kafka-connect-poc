@@ -10,6 +10,4 @@ ADD $MAVEN_REPOSITORY/mysql/mysql-connector-java/$MYSQL_DRIVER_VERSION/mysql-con
 
 COPY connect-distributed.properties /opt/connect/config/
 
-RUN confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:5.5.1
-
 ENTRYPOINT [ "connect-distributed", "/opt/connect/config/connect-distributed.properties" ]

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: kafka-connect
-        image: rpolisciuc/kc:5.5.1
+        image: rpolisciuc/kc:0.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8083

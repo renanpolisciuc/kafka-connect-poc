@@ -2,11 +2,9 @@ FROM confluentinc/cp-kafka-connect:5.5.1
 
 ARG MAVEN_REPOSITORY=https://repo1.maven.org/maven2
 ARG MYSQL_DRIVER_VERSION=8.0.21
-ARG PGSQL_DRIVER_VERSION=42.2.16
 
 ADD $MAVEN_REPOSITORY/mysql/mysql-connector-java/$MYSQL_DRIVER_VERSION/mysql-connector-java-$MYSQL_DRIVER_VERSION.jar \
-    $MAVEN_REPOSITORY/org/postgresql/postgresql/$PGSQL_DRIVER_VERSION/postgresql-$PGSQL_DRIVER_VERSION.jar \
-    /opt/connect/libs/
+    /usr/share/java/kafka-connect-jdbc/
 
 COPY connect-distributed.properties /opt/connect/config/
 

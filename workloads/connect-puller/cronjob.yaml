@@ -1,0 +1,15 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: kafka-connect-puller
+  namespace: kafka
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: kafka-connect-puller
+            image: rpolisciuc/kc-puller
+          restartPolicy: OnFailure

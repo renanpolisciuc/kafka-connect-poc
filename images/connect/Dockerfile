@@ -1,4 +1,4 @@
-FROM confluentinc/cp-kafka-connect:6.0.0
+FROM confluentinc/cp-kafka-connect:5.5.1
 
 ARG MAVEN_REPOSITORY=https://repo1.maven.org/maven2
 ARG MYSQL_DRIVER_VERSION=8.0.21

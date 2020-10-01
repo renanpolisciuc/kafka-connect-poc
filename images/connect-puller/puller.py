@@ -13,13 +13,19 @@ for c in connectors:
 
 print('-----')
 
+print("Downloading connectors...")
 connectors_pull = requests.get(connectors_pull_url).json()
-
+print("Connectors:")
+print(connectors_pull)
 for c in connectors_pull:
   try:
+    print("Connector:")
+    print(c)
     if not c['name'] in connectors:
       post_connector = requests.post('{0}/connectors'.format(kc_cluster), headers = {'content-type': 'application/json'}, data=json.dumps(c)).json()
       print(post_connector)
   except Exception as e:
     print(e)
+    
+print("Finish")
 

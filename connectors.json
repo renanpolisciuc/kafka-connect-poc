@@ -7,7 +7,8 @@
       "connection.url": "jdbc:mysql://mysql.databases:3306/my_database?user=root&password=admin",
       "mode": "incrementing",
       "incrementing.column.name": "id",
-      "poll.interval.ms": 10000
+      "poll.interval.ms": 10000,
+      "topic-prefix": "source-"
     }
   },
   {
